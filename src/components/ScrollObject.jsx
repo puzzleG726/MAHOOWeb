@@ -4,7 +4,7 @@ import { Center, useGLTF } from "@react-three/drei";
 
 export default function ScrollObject(props) {
   const groupRef = useRef();
-  const { scene } = useGLTF("/BlackDice.glb");
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}BlackDice.glb`);
 
   useFrame(() => {
     if (groupRef.current) {
@@ -20,4 +20,4 @@ export default function ScrollObject(props) {
   );
 }
 
-useGLTF.preload("/BlackDice.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}BlackDice.glb`);

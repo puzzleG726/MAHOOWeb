@@ -8,7 +8,7 @@ import "./ScrollFlipThree.css";
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
-const MODEL_URL = "/BlackDice.glb";
+const MODEL_URL = `${import.meta.env.BASE_URL}BlackDice.glb`;
 
 export default function ScrollFlipThree() {
   const rootRef = useRef(null);

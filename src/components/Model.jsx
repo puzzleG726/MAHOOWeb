@@ -5,7 +5,7 @@ import { Center, MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 export default function Model({ motion, transmissionBuffer }) {
   const group = useRef();
   const { viewport, size } = useThree();
-  const gltf = useGLTF("/mahoologo.glb");
+  const gltf = useGLTF(`${import.meta.env.BASE_URL}mahoologo.glb`);
   const meshes = useMemo(() => {
     const result = []; gltf.scene.traverse(child => { if (child.isMesh) result.push(child); }); return result;
   }, [gltf]);

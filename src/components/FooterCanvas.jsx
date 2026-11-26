@@ -39,7 +39,7 @@ export default function FooterCanvas({ reducedMotion }) {
       group.scale.setScalar(width <= 768 ? 3 : Math.min(4.7, camera.aspect * 2.2)); requestFrame();
     };
     const move = (event) => { if (!visible || reducedMotion || event.pointerType === "touch") return; const rect = container.getBoundingClientRect(); pointer.set((event.clientX - rect.left) / rect.width * 2 - 1, 1 - (event.clientY - rect.top) / rect.height * 2); };
-    new GLTFLoader().load("/mahoologo.glb", gltf => {
+    new GLTFLoader().load(`${import.meta.env.BASE_URL}mahoologo.glb`, gltf => {
       if (disposed) { disposeObject(gltf.scene); return; }
       model = gltf.scene;
       const box = new THREE.Box3().setFromObject(model), size = box.getSize(new THREE.Vector3());

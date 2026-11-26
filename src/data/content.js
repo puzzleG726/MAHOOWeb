@@ -1,4 +1,4 @@
-export const asset = (path) => `/${path.replace(/^public\//, "")}`;
+export const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^public\//, "")}`;
 
 export const translations = {
   en: {

@@ -45,7 +45,7 @@ function IntroScene({ motion }) {
   return <>
     {createPortal(<>
       <primitive object={field} />
-      <Text ref={text} font="/fonts/SpaceGrotesk-Variable.ttf" fontSize={1} letterSpacing={-0.065} color="#e8e9e9" anchorX="center" anchorY="middle">Mahoo Lab.</Text>
+      <Text ref={text} font={`${import.meta.env.BASE_URL}fonts/SpaceGrotesk-Variable.ttf`} fontSize={1} letterSpacing={-0.065} color="#e8e9e9" anchorX="center" anchorY="middle">Mahoo Lab.</Text>
     </>, backdrop)}
     <ambientLight intensity={0.35} />
     <directionalLight position={[1, 3, 4]} intensity={2.5} />

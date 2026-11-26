@@ -1,0 +1,42 @@
+.pixelBackground {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pixelBackgroundRow {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+}
+
+.pixelBackgroundBlock {
+  flex: 0 0 42px;
+  height: 10vh;
+  background: var(--final-color);
+  opacity: 0;
+  transition:
+    opacity 0ms linear var(--exit-delay),
+    background-color 200ms linear var(--exit-delay);
+}
+
+.pixelBackground.is-active .pixelBackgroundBlock {
+  opacity: 1;
+  background-color: var(--spawn-color);
+  transition:
+    opacity 0ms linear var(--enter-delay),
+    background-color 200ms linear var(--enter-delay);
+  animation: pixelColorSettle 200ms linear var(--enter-delay) forwards;
+}
+
+@keyframes pixelColorSettle {
+  to {
+    background-color: var(--final-color);
+  }
+}

@@ -1,0 +1,69 @@
+.scrollFlipThreeLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scrollFlipThreeSlot {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(420px, 55vw, 900px);
+  height: clamp(420px, 55vw, 900px);
+}
+
+.scrollFlipThreeSecond {
+  left: clamp(28px, 7vw, 120px);
+  top: 30%;
+  width: clamp(420px, 55vw, 900px);
+  height: clamp(420px, 55vw, 900px);
+}
+
+.scrollFlipThreeThird {
+  right: clamp(28px, 8vw, 140px);
+  bottom: clamp(42px, 8vh, 96px);
+  width: clamp(420px, 55vw, 900px);
+  height: clamp(420px, 55vw, 900px);
+}
+
+.scrollFlipThreeInitial {
+  left: 58%;
+  top: 14%;
+}
+
+.scrollFlipThreeMarker,
+.scrollFlipThreeCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.scrollFlipThreeMarker {
+  opacity: 0;
+}
+
+.scrollFlipThreeCanvas {
+  background: transparent;
+}
+
+@media (max-width: 720px) {
+  .scrollFlipThreeInitial {
+    left: 54%;
+    top: 18%;
+  }
+
+  .scrollFlipThreeSecond {
+    left: 8vw;
+    top: 48%;
+  }
+
+  .scrollFlipThreeThird {
+    right: 8vw;
+    bottom: 12vh;
+  }
+}

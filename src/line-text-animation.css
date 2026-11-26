@@ -1,0 +1,16 @@
+.line-text-animation {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.line-text-animation__heading {
+  margin: 0;
+}
+.line-text-animation__heading[data-line-state="pending"] { visibility: hidden; }
+
+.line-text-animation__line {
+  will-change: transform;
+}
+.line-text-animation__heading[data-line-state="complete"] .line-text-animation__line { will-change: auto; }
